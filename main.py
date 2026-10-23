@@ -65,7 +65,10 @@ def search_student(name: str):
 
     results = []
 
-    for stude
+    for student in students:
+        if name.lower() in student["name"].lower():
+        
+
 
 # =========================
 # FILTER STUDENTS BY COURSE
