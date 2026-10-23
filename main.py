@@ -150,7 +150,9 @@ def create_student(student: Student):
 
 @app.put("/students/{student_id}")
 def update_student(
-  
+    student_id: int,
+    student: Student
+):
 
     for existing_student in students:
 
