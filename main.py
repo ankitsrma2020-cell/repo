@@ -67,7 +67,11 @@ def search_student(name: str):
 
     for student in students:
         if name.lower() in student["name"].lower():
-        
+            results.append(student)
+
+    return {
+        "students": results
+    }
 
 
 # =========================
