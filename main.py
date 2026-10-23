@@ -159,7 +159,14 @@ def update_student(
         if existing_student["id"] == student_id:
 
             existing_student["name"] = student.name
-            
+            existing_student["age"] = student.age
+            existing_student["course"] = student.course
+
+            return {
+                "message": "Student updated successfully",
+                "student": existing_student
+            }
+
     raise HTTPException(
         status_code=404,
         detail="Student not found"
